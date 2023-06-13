@@ -44,8 +44,20 @@ public class WomanHelper {
                             System.out.println("She is hyper:");
                             mood = "hyper";
                         } else if (isMoving.equals("no")) {
-                            System.out.println("Her mood is happy!:");
-                            mood = "happy";
+                            System.out.println("Is she laughing? (yes/no)");
+                            String isHappy = scanner.nextLine().toLowerCase();
+
+                            if (isHappy.equals("yes")) {
+                                System.out.println("Is she laughing nervously? (yes/no)");
+                                String isLaughing = scanner.nextLine().toLowerCase();
+                                if (isLaughing.equals("yes")) {
+                                    System.out.println("Her mood is angry:");
+                                    mood = "angry";
+                                } else if (isLaughing.equals("no")) {
+                                    System.out.println("Her mood is happy:");
+                                    mood = "happy";
+                                }
+                            }
                         }
                     }
                 }
@@ -106,7 +118,7 @@ public class WomanHelper {
                 response = getRandomOption(evilOptions, random);
                 break;
             default:
-                response = "BRO u fucked up";
+                response = "Bro, u might die or have the best time of your life";
                 break;
         }
 
